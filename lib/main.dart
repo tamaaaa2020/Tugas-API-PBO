@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
-import 'post.dart';
+import 'post_list.dart'; // Ini sudah menangani daftar surat
+
 void main() {
- runApp(MyApp());
+  runApp(MyApp());
 }
+
 class MyApp extends StatelessWidget {
- @override
- Widget build(BuildContext context) {
- return MaterialApp(
- title: 'HTTP',
- debugShowCheckedModeBanner: false,
- theme: ThemeData(
- primarySwatch: Colors.blue,
- visualDensity: VisualDensity.adaptivePlatformDensity,
- ),
- home: PostPage(),
- );
- }
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Al-Qur\'an App',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.green,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
+      home: PostList(), // Ini menggantikan fungsi `post.dart`
+    );
+  }
 }
